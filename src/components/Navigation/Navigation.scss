@@ -1,0 +1,29 @@
+@import '../../scss/global';
+
+.Navigation {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background: white;
+	border-bottom: solid 2px black;
+	display: flex;
+	height: 60px;
+	text-align: center;
+	align-items: center;
+	z-index: 10000;
+
+	.Logo {
+		flex: 1;
+		font-size: 2em;
+		color: $primary;
+	}
+
+	.Link {
+		flex: 1;
+		transition: color 0.2s ease;
+
+		&:hover {
+			color: $accent;
+		}
+	}
+}

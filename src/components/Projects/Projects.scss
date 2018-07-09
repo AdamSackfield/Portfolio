@@ -1,0 +1,25 @@
+.Projects {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	grid-gap: 30px;
+	max-width: 960px;
+	margin: 0 auto 30px;
+
+	article {
+		position: relative;
+
+		.ProjectImg {
+			height: 200px;
+			width: 100%;
+			object-fit: cover;
+		}
+
+		.ProjectTitle {
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			padding: 10px;
+			background-color: rgba(255, 255, 255, 0.2);
+		}
+	}
+}

@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import { Switch, Route } from 'react-router-dom'
 import classes from './App.scss';
 
 import Navigation from '../components/Navigation/Navgation';
-import Intro from '../components/Intro/Intro'
+import Layout from '../components/Layout/Layout'
 
 class App extends Component {
 	render() {
@@ -11,9 +10,7 @@ class App extends Component {
 			<div className={classes.Main}>
 				<Navigation />
 
-				<Switch>
-					<Route path='/' exact component={Intro} />
-				</Switch>
+				<Layout />
 			</div>
 		);
 	}
