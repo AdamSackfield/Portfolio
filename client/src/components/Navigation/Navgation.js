@@ -21,7 +21,7 @@ const Navigation = () => {
 					About
 				</a>
 				<a name="intro" className={classes.Logo} onClick={smoothScroll}>
-					Logo
+					AS
 				</a>
 				<a name="projects" className={classes.Link} onClick={smoothScroll}>
 					Projects

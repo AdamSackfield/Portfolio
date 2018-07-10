@@ -1,4 +1,5 @@
 @import '../../scss/global';
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
 
 .Navigation {
 	display: flex;
@@ -18,6 +19,7 @@
 	.Logo {
 		flex-wrap: wrap;
 		order: -2;
+		font-family: 'Dancing Script';
 		font-size: 1.6em;
 		color: $primary;
 	}

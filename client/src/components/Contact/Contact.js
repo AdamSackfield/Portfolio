@@ -3,6 +3,14 @@ import classes from './Contact.scss';
 import axios from 'axios'
 import history from '../../hoc/History'
 
+let HOST = ''
+
+if(process.env.NODE_ENV === 'production') {
+	HOST = 'http://www.adamsackfield.com'
+} else {
+		HOST = 'http://localhost:3000'
+}
+
 class Contact extends Component {
 	constructor(props) {
 		super(props);
@@ -22,14 +30,18 @@ class Contact extends Component {
 	handleSubmit(event) {
 		event.preventDefault()
 		const { name, email, message } = this.state
-		axios.post(`http://localhost:3000/mailer/email`, { name, email, message }).then(response => {
+		axios.post(`${HOST}/mailer/email`, { name, email, message }).then(response => {
 			if(response.status === 200) {
 				console.log('Message Sent')
 				history.push('/success')
 				this.state = {}
 			} else {
 					console.log('Message sending failure.')
+					history.push('/error')
 			}
+		}).catch(error => {
+				console.log('Message sending failure.', error)
+				history.push('/error')
 		})
 	}
 
