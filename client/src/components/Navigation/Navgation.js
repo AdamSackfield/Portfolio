@@ -6,6 +6,7 @@ import classes from './Navigation.scss';
 const smoothScroll = (event) => {
 	event.preventDefault();
 	let name = event.target.name;
+	// TODO! scrollIntoView doesn't allow smooth parameter in Safari
 	document.getElementById(name).scrollIntoView({ behavior: 'smooth' });
 }
 
