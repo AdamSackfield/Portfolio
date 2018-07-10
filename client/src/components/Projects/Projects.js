@@ -17,7 +17,7 @@ const Projects = props => {
 				<h1 className={classes.ProjectTitle}>Project Title</h1>
 			</article>
 			<article>
-				<img classNameName={classes.ProjectImg} src="https://placeimg.com/320/200/tech" alt=" " />
+				<img className={classes.ProjectImg} src="https://placeimg.com/320/200/tech" alt=" " />
 				<h1 className={classes.ProjectTitle}>Project Title</h1>
 			</article>
 			<article>
