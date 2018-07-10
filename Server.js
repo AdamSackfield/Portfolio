@@ -20,7 +20,7 @@ if (process.env.NODE_ENV === 'production') {
 	Server.use(express.static('client/dist'));
 	Server.get('*', (req, res) => {
 		res.sendFile(path.resolve(__dirname, 'client', 'dist', 'index.html'));
-	});
+	}); 
 }
 
 Server.listen(PORT, () => {
