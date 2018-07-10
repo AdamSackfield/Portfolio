@@ -1,23 +1,29 @@
 {
-  "name": "portfolio",
-  "version": "1.0.0",
-  "description": "Portfolio for Adam Sackfield. Showcasing work.",
-  "main": "Server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Adam Sackfield",
-  "license": "ISC",
-  "dependencies": {
-    "body-parser": "^1.18.3",
-    "express": "^4.16.3",
-    "nodemailer": "^4.6.7",
-    "restify": "^7.2.1",
-    "restify-cors-middleware": "^1.1.1"
-  },
-  "devDependencies": {
-    "cors": "^2.8.4",
-    "dotenv": "^6.0.0",
-    "morgan": "^1.9.0"
-  }
+	"name": "portfolio",
+	"version": "1.0.0",
+	"description": "Portfolio for Adam Sackfield. Showcasing work.",
+	"main": "Server.js",
+	"scripts": {
+		"client-install": "npm install --prefix client",
+		"start": "node Server.js",
+		"server": "nodemon",
+		"client": "npm start --prefix client",
+		"dev": "concurrently \"npm run server\" \"npm run client\"",
+		"heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+	},
+	"author": "Adam Sackfield",
+	"license": "ISC",
+	"dependencies": {
+		"body-parser": "^1.18.3",
+		"concurrently": "^3.6.0",
+		"express": "^4.16.3",
+		"nodemailer": "^4.6.7",
+		"restify": "^7.2.1",
+		"restify-cors-middleware": "^1.1.1"
+	},
+	"devDependencies": {
+		"cors": "^2.8.4",
+		"dotenv": "^6.0.0",
+		"morgan": "^1.9.0"
+	}
 }
