@@ -9,7 +9,7 @@ import Contact from '../Contact/Contact';
 const Layout = props => {
 	return (
 		<Fragment> 
-			<section className={classes.Section}>
+			<section className={[classes.Section, classes.HideMobile].join(' ')}>
 				<Intro />
 			</section>
 
@@ -17,7 +17,14 @@ const Layout = props => {
 				<About />
 			</section>
 
-			<section className={classes.Section}>
+			<section className={classes.Section} style={{ 
+				backgroundColor: '#494949', 
+				fontSize: '2em', 
+				textAlign: 'center',
+				paddingTop: '60px',
+				color: 'white'
+			}}>
+				<h1>Projects</h1>
 				<Projects />
 			</section>
 

@@ -1,15 +1,17 @@
+@import '../../scss/global';
+
 .Projects {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
 	grid-gap: 30px;
-	max-width: 960px;
-	margin: 0 auto 30px;
+	margin: 0 10px 30px;
+	padding-top: 60px;
 
 	article {
 		position: relative;
 
 		.ProjectImg {
-			height: 200px;
+			height: 130px;
 			width: 100%;
 			object-fit: cover;
 		}
@@ -18,8 +20,32 @@
 			position: absolute;
 			bottom: 0;
 			width: 100%;
+			font-size: 0.7em;
 			padding: 10px;
-			background-color: rgba(255, 255, 255, 0.2);
+			color: $primary;
+			background-color: rgba(black, 0.7);
 		}
+	}
+}
+
+@media (min-width: 800px) {
+	.Projects {
+		grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+		max-width: 800px;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 0 20px;
+
+		article {
+			padding-top: 20px;
+		}
+	}
+}
+
+@media (min-width: 1000px) {
+	.Projects {
+		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+		max-width: 960px;
+		padding: 0;
 	}
 }

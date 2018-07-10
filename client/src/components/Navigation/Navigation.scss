@@ -4,7 +4,6 @@
 	display: flex;
 	flex-flow: column;
 	width: 100%;
-	height: 300px;
 	background: black;
 	color: white;
 	border-bottom: solid 2px black;
@@ -32,6 +31,10 @@
 			color: $accent;
 		}
 	}
+
+	.HideMobile {
+		display: none;
+	}
 }
 
 @media (min-width: 600px) {
@@ -58,6 +61,10 @@
 			&:hover {
 				color: $accent;
 			}
+		}
+
+		.HideMobile {
+			display: inline;
 		}
 	}
 }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import classes from './Contact.scss';
 import axios from 'axios'
+import history from '../../hoc/History'
 
 class Contact extends Component {
 	constructor(props) {
@@ -13,17 +14,19 @@ class Contact extends Component {
 			message: '' 
 		};
 	}
-
+ 
 	handleChange(event) {
 		this.setState({ [event.target.name]: event.target.value })
 	};
 
-	handleSubmit() {
+	handleSubmit(event) {
 		event.preventDefault()
 		const { name, email, message } = this.state
-		axios.post(`/mailer/email`, { name, email, message }).then(response => {
+		axios.post(`http://localhost:3000/mailer/email`, { name, email, message }).then(response => {
 			if(response.status === 200) {
 				console.log('Message Sent')
+				history.push('/success')
+				this.state = {}
 			} else {
 					console.log('Message sending failure.')
 			}
