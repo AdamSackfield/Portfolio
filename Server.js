@@ -16,16 +16,12 @@ Server.use(bodyParser.json());
 Server.use('/mailer', Router);
 
 if (process.env.NODE_ENV === 'production') {
-	console.log('Wrong')
+	console.log('App Running in Production')
 	Server.use(express.static('client/dist'));
-	Server.get('*')
-		.then(response => {
-			response.sendFile(path.resolve(__dirname, 'client', 'dist', 'index.html'));
-		})
-		.catch(error => {
-			console.log('DevEnv:error', error);
-		});  
-}   
+	Server.get('*', (req, res) => {
+		res.sendFile(path.resolve(__dirname, 'client', 'dist', 'index.html'));
+	});
+}
 
 Server.listen(PORT, () => {
 	console.log(`Serving on ${PORT}`);
