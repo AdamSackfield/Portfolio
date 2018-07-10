@@ -19,7 +19,7 @@ Router.post('/email', (req, res) => {
 		to: 'Sacki2015@icloud.com', // list of receivers
 		subject: `Portfolio Contact Form - ${name}`,
 		text: message, // plain text body
-		html: '<div>'+ message +'</div>', // html body
+		html: '<div><h2>From: ' + email + '</h2><br/><h3>Name: ' + name + '</h3><br/><p>' + message + '</p></p></div>', // html body
 	};
 
 	transporter.sendMail(mailOptions, (error, info) => {

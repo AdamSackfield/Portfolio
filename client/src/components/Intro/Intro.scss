@@ -10,15 +10,6 @@
 		width: 100%;
 	}
 
-	.Overlay {
-		position: absolute;
-		top: 60px;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		background: rgba(0, 0, 0, 0.3);
-	}
-
 	.Header {
 		position: absolute;
 		top: 18%;
@@ -43,5 +34,16 @@
 				color: $accent;
 			}
 		}
+	}
+}
+
+@media (min-width: 600px) {
+	.Overlay {
+		position: absolute;
+		top: 60px;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: rgba(0, 0, 0, 0.3);
 	}
 }
