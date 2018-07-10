@@ -21,7 +21,7 @@ class Contact extends Component {
 	handleSubmit() {
 		event.preventDefault()
 		const { name, email, message } = this.state
-		axios.post('http://www.adamsackfield.com/mailer/email', { name, email, message }).then(response => {
+		axios.post(`${process.env.HOST}/mailer/email`, { name, email, message }).then(response => {
 			if(response.status === 200) {
 				console.log('Message Sent')
 			} else {
