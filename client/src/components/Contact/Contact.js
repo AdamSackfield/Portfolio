@@ -47,7 +47,7 @@ class Contact extends Component {
 
 	render() {
 		return (
-			<div id="contact" className={classes.Contact}>
+			<div className={classes.Contact}>
 				<form onSubmit={this.handleSubmit.bind(this)}>
 					<h1>Get in Touch</h1>
 
@@ -69,8 +69,6 @@ class Contact extends Component {
 
 					<button>Send Message</button>
 				</form>
-
-				<footer>Site Designed and Developed by Adam Sackfield &copy;{new Date().getFullYear()}</footer>
 			</div>
 		);
 	}

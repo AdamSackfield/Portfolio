@@ -2,8 +2,8 @@ import React from 'react';
 import classes from './About.scss'
 
 const About = props => {
-	return (
-		<div id="about" className={classes.About}>
+	return ( 
+		<div className={classes.About}>
 			<div>
 				<h1>About Me</h1>
 

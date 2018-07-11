@@ -3,42 +3,35 @@
 
 .Navigation {
 	display: flex;
-	flex-flow: column;
+	flex-flow: row;
+	position: fixed;
 	width: 100%;
-	background: black;
-	color: white;
-	border-bottom: solid 2px black;
+	align-items: center;
 	text-align: center;
+	background: white;
+	color: black;
+	border-bottom: solid 2px black;
 	z-index: 10000;
 
 	.Logo,
 	.Link {
+		font-size: 1.6em;
 		padding: 10px 20px;
 	}
 
 	.Logo {
-		flex-wrap: wrap;
-		order: -2;
 		font-family: 'Dancing Script';
-		font-size: 1.6em;
 		color: $primary;
 	}
 
 	.Link {
-		flex-wrap: wrap;
 		transition: color 0.2s ease;
-		color: white;
 
 		&:hover {
 			color: $accent;
 		}
 	}
-
-	.HideMobile {
-		display: none;
-	}
 }
-
 @media (min-width: 600px) {
 	.Navigation {
 		position: fixed;
@@ -71,10 +64,8 @@
 	}
 }
 
-@media (min-width: 800px) {
+@media (max-width: 600px) {
 	.Navigation {
-		.Logo {
-			font-size: 2em;
-		}
+		height: 40px;
 	}
 }

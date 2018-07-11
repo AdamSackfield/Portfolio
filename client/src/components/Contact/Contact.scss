@@ -2,13 +2,14 @@
 
 .Contact {
 	background: #494949;
-	width: 100%;
 	height: 100%;
+	padding: 250px 0;
 
 	form {
-		width: 60%;
-		padding-top: 160px;
+		width: 100%;
 		margin: 0 auto;
+		background: white;
+		padding: 100px 4px;
 		text-align: center;
 
 		input,
@@ -16,29 +17,49 @@
 		button {
 			outline: none;
 			border: none;
-			padding: 20px;
-			width: 400px;
-			margin: 5px 0;
+			width: 80%;
+			margin: 10px 0;
+			font-size: 1.3em;
+			padding: 5px;
+		}
+
+		input,
+		textarea {
+			border-bottom: solid 1px $primary;
 		}
 
 		textarea {
-			height: 200px;
+			height: 120px;
 		}
 
 		button {
-			background: $primary;
-		}
+			border: solid 1px $primary;
+			padding: 10px;
+			transition: background 0.3s ease;
 
-		h1 {
-			font-size: 3em;
-			color: $primary;
-			padding-bottom: 30px;
+			&:hover {
+				background: $primary;
+			}
 		}
 	}
 }
 
-footer {
-	text-align: center;
-	color: white;
-	padding-top: 20px;
+@media (min-width: 1000px) {
+	.Contact {
+		padding-top: 120px;
+
+		form {
+			width: 60%;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.Contact {
+		padding-top: 120px;
+
+		form {
+			width: 50%;
+		}
+	}
 }

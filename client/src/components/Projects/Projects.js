@@ -1,34 +1,44 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import classes from './Projects.scss';
 
 const Projects = props => {
 	return (
-		<div id="projects" className={classes.Projects}>
-			<article>
-				<img className={classes.ProjectImg} src="https://placeimg.com/640/480/tech" alt=" " />
-				<h1 className={classes.ProjectTitle}>Project Title</h1>
-			</article>
-			<article>
-				<img className={classes.ProjectImg} src="https://placeimg.com/320/240/tech" alt=" " />
-				<h1 className={classes.ProjectTitle}>Project Title</h1>
-			</article>
-			<article>
-				<img className={classes.ProjectImg} src="https://placeimg.com/240/200/tech" alt=" " />
-				<h1 className={classes.ProjectTitle}>Project Title</h1>
-			</article>
-			<article>
-				<img className={classes.ProjectImg} src="https://placeimg.com/320/200/tech" alt=" " />
-				<h1 className={classes.ProjectTitle}>Project Title</h1>
-			</article>
-			<article>
-				<img className={classes.ProjectImg} src="https://placeimg.com/440/300/tech" alt=" " />
-				<h1 className={classes.ProjectTitle}>Project Title</h1>
-			</article>
-			<article>
-				<img className={classes.ProjectImg} src="https://placeimg.com/360/180/tech" alt=" " />
-				<h1 className={classes.ProjectTitle}>Project Title</h1>
-			</article>
-		</div>
+		<Fragment>
+			<h1 className={classes.Title}>Projects</h1>
+			<div className={classes.Container}>
+
+				<div className={classes.Project}>
+					<img src="http://via.placeholder.com/3500x1500" alt="" />
+					<p>Founder Connect</p>
+				</div>
+
+				<div className={classes.Project}>
+					<img src="http://via.placeholder.com/3500x1500" alt="" />
+					<p>Fitness Logger</p>
+				</div>
+
+				<div className={classes.Project}>
+					<img src="http://via.placeholder.com/3500x1500" alt="" />
+					<p>JavaScript Game</p>
+				</div> 
+
+				<div className={[classes.Project, classes.MobileHide].join(' ')}>
+					<img src="http://via.placeholder.com/3500x1500" alt="" />
+					<p>Currency Converter</p>
+				</div> 
+
+				<div className={[classes.Project, classes.MobileHide].join(' ')}>
+					<img src="http://via.placeholder.com/3500x1500" alt="" />
+					<p>Currency Converter</p>
+				</div> 
+
+				<div className={[classes.Project, classes.MobileHide].join(' ')}>
+					<img src="http://via.placeholder.com/3500x1500" alt="" />
+					<p>Currency Converter</p>
+				</div> 
+			</div>
+				<p className={classes.Mobile}>More Projects available on desktop version</p>
+		</Fragment>
 	);
 };
 

@@ -1,36 +1,47 @@
 import React, { Fragment } from 'react';
-import classes from './Layout.scss';
+import { Section, SectionsContainer } from 'react-fullpage';
 
-import Intro from '../Intro/Intro'
+import Navigation from '../Navigation/Navgation';
+import Intro from '../Intro/Intro';
 import About from '../About/About';
 import Projects from '../Projects/Projects';
 import Contact from '../Contact/Contact';
 
 const Layout = props => {
+	let options = {
+		sectionClassName: 'section',
+		anchors: ['intro', 'about', 'projects', 'contact'],
+		scrollBar: false,
+		navigation: true,
+		verticalAlign: true,
+		sectionPaddingTop: '0',
+		sectionPaddingBottom: '0',
+		arrowNavigation: true,
+		delay: 1000,
+		css3: true,
+	};
+
 	return (
-		<Fragment> 
-			<section className={[classes.Section, classes.HideMobile].join(' ')}>
-				<Intro />
-			</section>
+		<Fragment>
+			<Navigation />
 
-			<section className={classes.Section}>
-				<About />
-			</section>
+			<SectionsContainer {...options}>
+				<Section>
+					<Intro />
+				</Section>
 
-			<section className={classes.Section} style={{ 
-				backgroundColor: '#494949', 
-				fontSize: '2em', 
-				textAlign: 'center',
-				paddingTop: '60px',
-				color: 'white'
-			}}>
-				<h1>Projects</h1>
-				<Projects />
-			</section>
+				<Section>
+					<About />
+				</Section>
 
-			<section className={classes.Section}>
-				<Contact />
-			</section>
+				<Section>
+					<Projects />
+				</Section>
+
+				<Section>
+					<Contact />
+				</Section>
+			</SectionsContainer>
 		</Fragment>
 	);
 };

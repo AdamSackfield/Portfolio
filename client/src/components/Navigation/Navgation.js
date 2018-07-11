@@ -1,32 +1,24 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import classes from './Navigation.scss';
-
-const smoothScroll = event => {
-	event.preventDefault();
-	let name = event.target.name;
-	// TODO! scrollIntoView doesn't allow smooth parameter in Safari
-	document.getElementById(name).scrollIntoView({ behavior: 'smooth' });
-};
 
 const Navigation = () => {
 	return (
 		<header className={classes.Header}>
 			<nav className={classes.Navigation}>
-				<a name="intro" className={[classes.Link, classes.HideMobile].join(' ')} onClick={smoothScroll}>
+				<a name="intro" href='#intro' className={classes.Link} >
 					Home
 				</a>
-				<a name="about" className={classes.Link} onClick={smoothScroll}>
+				<a name="about" href='#about' className={classes.Link} >
 					About
 				</a>
-				<a name="intro" className={classes.Logo} onClick={smoothScroll}>
+				<a name="intro" href='#intro' className={classes.Logo} >
 					AS
 				</a>
-				<a name="projects" className={classes.Link} onClick={smoothScroll}>
+				<a name="projects" href='#projects' className={classes.Link} >
 					Projects
 				</a>
-				<a name="contact" className={classes.Link} onClick={smoothScroll}>
+				<a name="contact" href='#contact' className={classes.Link} >
 					Get in touch
 				</a>
 			</nav>
