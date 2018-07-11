@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './Intro.scss'
 
-const Intro = props => { 
+const Intro = () => { 
 	return ( 
 		<div className={classes.Intro}>
 			<div className={classes.Overlay}>

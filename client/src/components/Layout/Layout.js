@@ -7,7 +7,7 @@ import About from '../About/About';
 import Projects from '../Projects/Projects';
 import Contact from '../Contact/Contact';
 
-const Layout = props => {
+const Layout = () => {
 	let options = {
 		sectionClassName: 'section',
 		anchors: ['intro', 'about', 'projects', 'contact'],

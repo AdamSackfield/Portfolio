@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import classes from './Projects.scss';
 
-const Projects = props => {
+const Projects = () => {
 	return (
 		<Fragment>
 			<h1 className={classes.Title}>Projects</h1>

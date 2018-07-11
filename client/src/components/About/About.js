@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './About.scss'
 
-const About = props => {
+const About = () => {
 	return ( 
 		<div className={classes.About}>
 			<div>
