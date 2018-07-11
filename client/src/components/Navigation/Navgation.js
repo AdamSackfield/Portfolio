@@ -19,7 +19,7 @@ const Navigation = () => {
 					Projects
 				</a>
 				<a name="contact" href='#contact' className={classes.Link} >
-					Get in touch
+					Contact
 				</a>
 			</nav>
 		</header>
