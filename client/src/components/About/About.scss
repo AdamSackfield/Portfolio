@@ -1,9 +1,14 @@
 @import '../../scss/global';
 
 .About {
+	display: table-cell;
 	height: 100%;
 	padding: 50px 15px 0;
 	text-align: center;
+
+	div {
+		justify-content: middle;
+	}
 
 	h1 {
 		font-size: 2em;

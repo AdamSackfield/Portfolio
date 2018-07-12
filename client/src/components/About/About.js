@@ -1,8 +1,8 @@
 import React from 'react';
-import classes from './About.scss'
+import classes from './About.scss';
 
 const About = () => {
-	return ( 
+	return (
 		<div className={classes.About}>
 			<div>
 				<h1>About Me</h1>
@@ -19,10 +19,9 @@ const About = () => {
 					</p>
 
 					<p>
-						Before going freelance, Adam worked ten years in customer service. After several years of self
-						teaching outside of work, now works freelance building scalable and maintainable code for
-						individuals and companies. Adam has become proficient in many technologies and systems,Vanilla
-						JavaScript, React and Node.
+						After several years of self teaching outside of work, he now works freelance, building scalable
+						and maintainable code for individuals and companies. Adam has become proficient in many
+						technologies and systems, such as Vanilla JavaScript, React and Node.
 					</p>
 
 					<p>

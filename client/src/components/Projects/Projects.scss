@@ -15,7 +15,6 @@
 .Container {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 	width: 100%;
 	padding: 0 20px;
 	text-align: center;
@@ -95,6 +94,10 @@
 }
 
 @media (min-width: 1000px) {
+	.Title {
+		padding-top: 70px;
+	}
+
 	.Container {
 		.Project {
 			flex-basis: 26%;
